@@ -1,4 +1,3 @@
-// Fetch and display initial product list
 fetch("https://dummyjson.com/products")
   .then((res) => res.json())
   .then((data) => {
@@ -11,7 +10,7 @@ fetch("https://dummyjson.com/products")
 const main = document.getElementById("root");
 
 function createUI(products) {
-  main.innerHTML = '';  // Clear previous content
+  main.innerHTML = ''; 
 
   products.forEach(product => {
     const newCard = document.createElement("div");
@@ -40,6 +39,6 @@ function searchProducts(e) {
 }
 
 function convertToINR(price) {
-  const exchangeRate = 82;  // Example conversion rate from USD to INR
+  const exchangeRate = 82;
   return (price * exchangeRate).toFixed(2);
 }
